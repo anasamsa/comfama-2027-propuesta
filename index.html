@@ -41,7 +41,7 @@ h1,h2,h3,h4{margin:0}
 .hero__title{font-family:var(--serif);font-weight:800;font-size:clamp(52px,9.4vw,118px);line-height:1.05;letter-spacing:-.03em;margin:0;padding-block:.04em .02em}
 .hero__title .grad{font-weight:800;padding-right:.03em;background:linear-gradient(96deg,var(--green-br),var(--blue-br));-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero__kicker{font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(18px,2.4vw,24px);color:#C3D0E4;margin:20px 0 0}
-.hero__lede{max-width:56ch;color:#AEBED4;font-size:clamp(16.5px,1.5vw,19px);line-height:1.6;margin:30px 0 0}
+.hero__sub{max-width:34ch;color:#C3D0E4;font-size:clamp(15px,1.5vw,19px);font-weight:500;line-height:1.45;margin:32px 0 0;padding-top:26px;border-top:1px solid rgba(255,255,255,.18)}
 .facts{display:flex;flex-wrap:wrap;gap:14px 40px;margin:44px 0 0;padding-top:30px;border-top:1px solid rgba(255,255,255,.14)}
 .fact{display:flex;flex-direction:column;gap:3px}
 .fact__v{font-family:var(--serif);font-size:clamp(24px,3.2vw,36px);font-weight:400;line-height:1;color:#fff}
@@ -60,6 +60,13 @@ h1,h2,h3,h4{margin:0}
 /* ---------- blocks ---------- */
 .block{padding:88px 0}
 .block--tint{background:var(--tint)}
+
+/* fondos vivos detras de los bloques */
+.bgsec{position:relative;overflow:hidden}
+.bgsec > *{position:relative;z-index:2}
+.bgsec::before{content:"";position:absolute;inset:0;z-index:0;background-image:var(--bg);background-size:cover;background-position:var(--bgpos,center);background-repeat:no-repeat}
+.bgsec::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,var(--veil) 0%,var(--veil) 44%,rgba(237,241,246,.6) 68%,rgba(237,241,246,0) 100%)}
+@media(max-width:820px){.bgsec::after{background:rgba(237,241,246,.9)}}
 .seclabel{font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin:0 0 34px;display:flex;align-items:center;gap:18px}
 .seclabel::after{content:"";flex:1;height:1px;background:var(--line)}
 
@@ -83,6 +90,11 @@ h1,h2,h3,h4{margin:0}
 .cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
 
 /* donde vive la imagen */
+.moods{display:grid;grid-template-columns:1fr;gap:2px;background:var(--line);margin-top:clamp(34px,4.5vw,64px)}
+@media(min-width:900px){.moods{grid-template-columns:1.25fr 1fr}.moods img:first-child{grid-row:span 2}}
+.moods img{width:100%;height:100%;object-fit:cover;aspect-ratio:16/10;background:var(--card)}
+@media(min-width:900px){.moods img:first-child{aspect-ratio:auto;min-height:100%}}
+
 .apps{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:clamp(30px,4vw,48px)}
 @media(min-width:720px){.apps{grid-template-columns:repeat(3,1fr)}}
 .app{background:var(--card);padding:20px 22px 22px;display:flex;flex-direction:column;gap:5px}
@@ -253,6 +265,11 @@ tr.money th{color:var(--ink);font-size:12px}
 tr.money td{font-family:var(--serif);font-size:clamp(20px,2.6vw,26px);font-weight:500;color:var(--ink)}
 tr.money{background:var(--green-soft)}
 
+ul.entreg{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:9px 30px;max-width:860px}
+@media(min-width:720px){ul.entreg{grid-template-columns:1fr 1fr}}
+ul.entreg li{position:relative;padding-left:24px;font-size:14.5px;color:var(--ink);line-height:1.5}
+ul.entreg li::before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:50%;background:linear-gradient(96deg,var(--green-br),var(--blue-br))}
+
 ul.cond{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:10px;max-width:72ch}
 ul.cond li{position:relative;padding-left:22px;font-size:14.5px;color:var(--muted);line-height:1.55}
 ul.cond li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;background:var(--green);border-radius:2px}
@@ -348,10 +365,7 @@ a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
     <div class="hero__body">
       <p class="hero__eyebrow">Festival de Animación Comfama · Edición 2027</p>
       <h1 class="hero__title">Bocetos <span class="grad">del mañana</span></h1>
-      <p class="hero__lede">
-        El Retiro es donde todas las formas de animar se encuentran antes de que el país las lleve a Annecy.
-        Esta es nuestra propuesta creativa para la identidad audiovisual de la cuarta edición.
-      </p>
+      <p class="hero__sub">Propuesta creativa para la identidad audiovisual y estética de la edición 2027</p>
     </div>
   </div>
 </header>
@@ -371,22 +385,22 @@ a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
 <section class="block">
   <div class="wide">
     <p class="seclabel reveal">01 · Quiénes somos</p>
-    <h2 class="bigt reveal">Por qué este reto <span class="grad">es para nosotros</span></h2>
+    <h2 class="bigt reveal">Por qué este reto <span class="grad">es para&nbsp;Samsa</span></h2>
     <div class="cols3">
       <div class="pill reveal">
         <p class="pill__k">La técnica mixta <span class="g">es nuestra génesis</span></p>
-        <p>Desde nuestros primeros proyectos hemos encontrado en la mezcla de técnicas una de nuestras principales formas de expresión: un personaje dibujado a mano puede convivir con un escenario 3D, una textura puede estar construida digitalmente, una animación tradicional puede encontrarse con elementos generados.</p>
-        <p>Llevamos diez años combinando dibujo, 3D, motion y, desde hace tres, IA generativa dentro del mismo pipeline. No es un experimento, es nuestra forma de trabajar.</p>
+        <p>Desde nuestros primeros proyectos hemos encontrado en la mezcla de técnicas una de nuestras principales formas de expresión: un personaje dibujado a mano puede convivir con un escenario 3D, una textura puede estar construida digitalmente, una animación tradicional puede encontrarse con elementos generados con inteligencia artificial.</p>
+        <p>La técnica mixta ha sido nuestra bandera desde el principio. Diez años combinando dibujo, 3D, motion e IA generativa dentro del mismo pipeline. No es un experimento, es nuestra forma de trabajar.</p>
       </div>
       <div class="pill reveal">
         <p class="pill__k">Somos un ecosistema <span class="g">descentralizado</span></p>
-        <p>Nuestro estudio nació en Pereira hace diez años. Hoy tenemos equipo en Colombia, Argentina y España, y seguimos operando desde ahí.</p>
+        <p>Nuestro estudio nació en Pereira hace más de diez años y desde Pereira seguimos operando. Es un proyecto profundamente colombiano.</p>
         <p>El documento curatorial pregunta cómo se construye un ecosistema de animación que no dependa solo de Bogotá o Medellín. Nosotros somos parte de esa respuesta.</p>
       </div>
       <div class="pill reveal">
         <p class="pill__k">Sabemos <span class="g">contar historias</span></p>
-        <p>Además de producir para marcas, desarrollamos propiedad intelectual propia: <i>Frui</i>, largometraje animado en coproducción entre Colombia y Argentina; <i>Katú y el bosque mágico</i>, serie y largometraje en desarrollo; <i>Soro</i>, serie vertical con IA; y <i>Lucky Bastards Studio</i>, nuestra línea de videojuegos.</p>
-        <p>Sabemos lo que es diseñar personajes que tienen que sostener una historia, no solo una campaña. Esa es la experiencia que traemos.</p>
+        <p>Hemos trabajado con marcas importantes, en Colombia y a nivel internacional. Y también hemos desarrollado propiedad intelectual propia: <i>Frui</i>, largometraje animado en coproducción entre Colombia y Argentina; <i>Katú y el bosque mágico</i>, serie y largometraje en desarrollo; <i>Soro</i>, serie vertical con IA; y <i>Lucky Bastards Studio</i>, nuestra línea de videojuegos.</p>
+        <p>Sabemos diseñar personajes que tienen que sostener una historia, no solo una campaña.</p>
               </div>
     </div>
 
@@ -413,14 +427,14 @@ a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
     <div class="cell"><img src="img/kv-becas.jpg" alt="Ilustración de campaña producida por Samsa."><div class="cap2"><b>Mexicana de Becas</b><span>Imagen de campaña en 2D.</span></div></div>
   </div>
 
-<section class="block block--tint">
+<section class="block block--tint bgsec" style="--bg:url(img/bg-1.jpg);--bgpos:right center;--veil:#EDF1F6">
   <div class="wide">
     <p class="seclabel reveal">02 · El concepto</p>
     <div class="concept">
-      <h2 class="bigt reveal">Un boceto no es una versión incompleta de algo terminado: <span class="grad">es una posibilidad.</span></h2>
+      <h2 class="bigt reveal">Un boceto no es una versión incompleta: <span class="grad">es una posibilidad.</span></h2>
       <div class="concept__body reveal">
-        <p>Y nunca aparece una sola. Ahora mismo conviven todas las maneras de trazar: la mano, el software, el motor de juego, la máquina que genera. Ninguna reemplazó a la anterior, y ninguna reemplazó a quien decide qué se dibuja.</p>
-        <p>Esa convivencia es lo que va a quedar retratado de estos años, aunque nadie se lo haya propuesto. Y a nosotros nos parece un motivo de fiesta antes que un problema por resolver. El Retiro es justo donde esas maneras se encuentran, el último punto de reunión antes de que el país las lleve a Annecy.</p>
+        <p>Ahora mismo conviven todas las posibilidades: la mano, el software, el motor de juego, la IA generativa. Pero ninguna reemplazó a la anterior, y ninguna reemplaza a quien decide y piensa qué se dibuja.</p>
+        <p>Esa convivencia es la fotografía de nuestra época. Buscamos que todo el concepto artístico y creativo nos presente a El Retiro como el lugar donde esas maneras se encuentran, antes de que lleguemos a Annecy.</p>
         <p class="concept__end">Frente a un futuro que todavía estamos dibujando, todas esas posibilidades están en el mismo plano.</p>
       </div>
     </div>
@@ -431,23 +445,16 @@ a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
   <div class="wide">
     <p class="seclabel reveal">03 · La imagen</p>
     <h2 class="bigt reveal">“Bocetos del mañana” debe representarse <span class="grad">en una imagen.</span></h2>
-    <p class="body-lg reveal" style="margin-top:24px;max-width:62ch">Antes que un video, esta edición necesita una imagen: la que va en el afiche, se repite en la programación, se proyecta en la pantalla del parque y se reconoce después en redes. Esa imagen es el concepto resuelto en un solo plano.</p>
-    <p class="body-lg reveal" style="margin-top:15px;max-width:62ch">Todo lo demás sale de ahí, incluido el tráiler. Por eso las dos opciones que siguen se diferencian en cómo se construye esa imagen, y no en lo que pasa durante los treinta segundos.</p>
-    <div class="apps reveal">
-      <div class="app"><b>Afiche del festival</b><span>La pieza madre. De ella salen el color, la tipografía y los personajes.</span></div>
-      <div class="app"><b>Afiche del Mercado</b><span>Misma familia, tono de industria.</span></div>
-      <div class="app"><b>Programación impresa</b><span>El sistema aplicado a tablas y horarios sin perder carácter.</span></div>
-      <div class="app"><b>Catálogo de industria</b><span>Portada, diagramación y páginas tipo.</span></div>
-      <div class="app"><b>Redes</b><span>Adaptaciones verticales, cuadradas y de historia.</span></div>
-      <div class="app"><b>Pantallas y espacios</b><span>Señalética, escenario y proyección del festival.</span></div>
-      <div class="app app--v"><b>Tráiler de lanzamiento</b><span>La imagen puesta en movimiento. 30 a 40 segundos.</span></div>
-      <div class="app app--v"><b>Video promocional</b><span>Versión corta para difusión.</span></div>
-      <div class="app app--v"><b>Video de cierre</b><span>Rodado en El Retiro durante el festival.</span></div>
-      <div class="app"><b>Stand del Mercado</b><span>Diseño de nuestro espacio en la feria.</span></div>
-      <div class="app"><b>Sistema gráfico</b><span>Color, tipografía y reglas de uso para que el equipo del festival lo aplique solo.</span></div>
-      <div class="app"><b>Dos charlas</b><span>Nuestra participación en la programación.</span></div>
-    </div>
-    <p class="body-lg reveal" style="margin-top:clamp(34px,4vw,54px);max-width:62ch">Afiches que hemos hecho para nuestras propias historias. La misma tarea: encontrar la imagen que sostiene todo lo demás.</p>
+    <p class="body-lg reveal" style="margin-top:24px;max-width:62ch">“Bocetos del mañana” funciona como concepto general y admite muchas representaciones. Lo que proponemos es aterrizarlo en una imagen: un plano donde conviven varias maneras de dibujar, resuelto con una técnica definida.</p>
+    <p class="body-lg reveal" style="margin-top:15px;max-width:62ch">El afiche y todos los derivados, impresos y visuales, son fotogramas de esa misma imagen. Por eso las dos opciones que siguen se diferencian en cómo se construye.</p>
+  </div>
+  <div class="moods">
+    <img src="img/mood-2.jpg" alt="Exploración visual: personajes en una calle de pueblo colombiano resueltos en distintas técnicas.">
+    <img src="img/mood-3.jpg" alt="Exploración visual: escena con personajes en distintas técnicas conviviendo en el mismo espacio.">
+    <img src="img/mood-1.jpg" alt="Tablero de referencias de estilos y técnicas de animación.">
+  </div>
+  <div class="wide">
+    <p class="seclabel reveal" style="margin-top:clamp(46px,6vw,80px)">Sabemos encontrar la imagen que sostiene todo lo demás</p>
   </div>
   <div class="bleed bleed--4">
     <div class="cell"><img src="img/ip-frui.jpg" alt="Afiche de Frui, largometraje animado de Samsa."><div class="cap2"><b>Frui</b><span>Largometraje animado en desarrollo. Coproducción con Argentina.</span></div></div>
@@ -468,24 +475,12 @@ a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
           <span class="pack__no">1</span>
           <div>
             <h3 class="pack__t">Técnica mixta en un mismo espacio</h3>
-            <p class="pack__sub">Un homenaje a la animación.</p>
-          </div>
+                      </div>
         </div>
       </div>
       <div class="pack__body">
-        <p>La imagen de la edición es un plano donde conviven varias maneras de dibujar, y el afiche es un fotograma de ese plano. Personajes en 2D, unos animados en cut-out y otros cuadro a cuadro según lo que pida la escena, caminando por un mundo construido en 3D con ambientes y texturas generadas con IA. El boceto queda a la vista todo el tiempo: líneas de construcción, correcciones, trazos que nadie borró.</p>
-        <p>Y mientras eso pasa, los personajes y los objetos van citando hitos de la historia de la animación, del zoótropo a la línea blanca de <i>Fantasmagorie</i>. Cada uno de esos inventos llegó anunciando que reemplazaba al anterior. Ninguno lo logró. Siguen todos ahí, igual que las técnicas.</p>
-        <p>La pieza termina en El Retiro, levantado en 3D con la arquitectura del municipio, y en la gente sentada frente a la pantalla al aire libre. Que es, al final, donde empezó todo esto.</p>
-      </div>
-      <div class="minihitos">
-        <div class="mh">
-          <img src="img/zoetrope.jpg" alt="Zoótropo, tambor con ranuras verticales.">
-          <div><b>1834 · El zoótropo</b><span>Un tambor con ranuras y un grupo asomándose al mismo tiempo.</span></div>
-        </div>
-        <div class="mh">
-          <img src="img/fantasmagorie.gif" alt="Fragmento animado de Fantasmagorie, una línea blanca que se transforma.">
-          <div><b>1908 · Fantasmagorie</b><span>La primera película enteramente animada es una línea que no se corta.</span></div>
-        </div>
+        <p>Personajes en 2D, unos animados en cut-out y otros cuadro a cuadro según lo que pida la escena, caminando por un mundo construido en 3D con ambientes y texturas generadas con IA. El boceto pesa dentro de la línea visual: líneas de construcción, correcciones, trazos que nadie borró.</p>
+                <p>La pieza resalta el contexto de El Retiro, su arquitectura levantada en 3D, y termina en la gente sentada frente a la pantalla al aire libre. Todas las técnicas conviviendo en un mismo espacio.</p>
       </div>
     </div>
   </div>
@@ -511,27 +506,15 @@ a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
         <div style="display:flex;gap:16px;align-items:flex-start;flex:1 1 220px;min-width:0">
           <span class="pack__no">2</span>
           <div>
-            <h3 class="pack__t">Cinco técnicas, un mismo plano</h3>
-            <p class="pack__sub">Qué pasaría si cada técnica de animación fuera un personaje?</p>
+            <h3 class="pack__t">Cinco técnicas, cinco mundos</h3>
+            <p class="pack__sub">Cada técnica con su propio espacio.</p>
           </div>
         </div>
       </div>
       <div class="pack__body">
-        <p>Cinco personajes, cada uno construido desde un lenguaje distinto y con identidad visual propia. Funcionan juntos en el afiche y por separado en cada pieza: uno por cada día de programación, uno por cada formato de redes, los cinco en el plano final.</p>
+        <p>Acá cada técnica no comparte plano con las otras: tiene su propio mundo, con su color, su textura y sus reglas. Dos caminos para contarlo.</p>
       </div>
 
-      <div class="tbl-wrap" style="margin-top:26px">
-        <table class="chars">
-          <thead><tr><th>Personaje</th><th>Cómo está hecho y quién es</th></tr></thead>
-          <tbody>
-            <tr><td>Boceto</td><td>Todavía está encontrando su forma. Líneas sueltas, correcciones y anotaciones al margen. Es el más tímido del grupo y se siente en desventaja frente a los otros.</td></tr>
-            <tr><td>Tradicional</td><td>Construido cuadro a cuadro, con la expresividad y la imperfección del dibujo hecho a mano. El que lleva más tiempo en esto.</td></tr>
-            <tr><td>2D cut-out</td><td>Formado por piezas, capas y articulaciones. Sus movimientos revelan la lógica de construcción de la técnica. Funciona bajo sus propias reglas.</td></tr>
-            <tr><td>3D</td><td>Volumen, iluminación y materiales. Habita el espacio de otra manera. Un poco prepotente.</td></tr>
-            <tr><td>IA</td><td>Una forma nueva de generar imagen y movimiento. No vino a reemplazar a nadie, es una herramienta más.</td></tr>
-          </tbody>
-        </table>
-      </div>
 
       <div class="tabs" role="tablist" aria-label="Rutas narrativas de la opción 2">
         <button class="tab" id="t2a" role="tab" aria-selected="true" aria-controls="p2a"><span class="n">2A</span>Las cinco identidades</button>
@@ -540,7 +523,20 @@ a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
 
       <div class="panel" id="p2a" role="tabpanel" aria-labelledby="t2a">
         <h4 class="panel__t route__t">Las cinco identidades</h4>
-        <p>Los cinco están ahí desde el principio, cada uno convencido de que su manera es la correcta. Eso no termina en pelea sino en una competencia con humor: cada técnica quiere lucirse en lo que mejor sabe hacer. Uno corre, otro nada, otro boxea, y cada escena está resuelta con el lenguaje de esa técnica. Van por caminos distintos y terminan cruzando la meta juntos.</p>
+        <p>Cinco personajes, cada uno construido desde un lenguaje distinto y con identidad visual propia. Cada uno habita su propio mundo.</p>
+  <div class="tbl-wrap" style="margin-top:26px">
+          <table class="chars">
+            <thead><tr><th>Personaje</th><th>Cómo está hecho y quién es</th></tr></thead>
+            <tbody>
+              <tr><td>Boceto</td><td>Todavía está encontrando su forma. Líneas sueltas, correcciones y anotaciones al margen. Es el más tímido del grupo y se siente en desventaja frente a los otros.</td></tr>
+              <tr><td>Tradicional</td><td>Construido cuadro a cuadro, con la expresividad y la imperfección del dibujo hecho a mano. El que lleva más tiempo en esto.</td></tr>
+              <tr><td>2D cut-out</td><td>Formado por piezas, capas y articulaciones. Sus movimientos revelan la lógica de construcción de la técnica. Funciona bajo sus propias reglas.</td></tr>
+              <tr><td>3D</td><td>Volumen, iluminación y materiales. Habita el espacio de otra manera. Un poco prepotente.</td></tr>
+              <tr><td>IA</td><td>Una forma nueva de generar imagen y movimiento. No vino a reemplazar a nadie, es una herramienta más.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top:22px">Los cinco están ahí desde el principio, cada uno convencido de que su manera es la correcta. Eso no termina en pelea sino en una competencia con humor: cada técnica quiere lucirse en lo que mejor sabe hacer. Uno corre, otro nada, otro boxea, y cada escena está resuelta con el lenguaje de esa técnica. Van por caminos distintos y terminan cruzando la meta juntos.</p>
         <p>El plano final los junta a todos en El Retiro, en una sola composición. El guiño al videojuego entra por lo visual y no por la trama: una interfaz que presenta a los personajes, un momento de selección, una cámara que se mueve como en un juego.</p>
         <p class="claim">Un mismo festival. Un mismo territorio. Muchas formas de animar.</p>
         <div class="vid plyr" data-provider="yt" data-id="mRSvq3NYQKg">
@@ -553,7 +549,7 @@ a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
 
       <div class="panel" id="p2b" role="tabpanel" aria-labelledby="t2b" hidden>
         <h4 class="panel__t route__t">El proceso a la vista</h4>
-        <p>Un mismo personaje atraviesa las cinco técnicas. Empieza como boceto, líneas que todavía no saben en qué se van a convertir, y va mutando: se vuelve dibujo tradicional, se articula en cut-out, gana volumen en 3D, se expande con IA. No va de peor a mejor. Es el mismo personaje mostrándose de cinco maneras, y cada una le da algo que las otras no pueden.</p>
+        <p>Acá no hay cinco personajes: hay uno solo que atraviesa las cinco técnicas. Empieza como boceto, líneas que todavía no saben en qué se van a convertir, y va mutando: se vuelve dibujo tradicional, se articula en cut-out, gana volumen en 3D, se expande con IA. No va de peor a mejor. Es el mismo personaje mostrándose de cinco maneras, y cada una le da algo que las otras no pueden.</p>
         <p>Acá el proceso es la historia. Aparecen la mano que dibuja, la pantalla del software, las capas que se prenden y se apagan, las pruebas que no quedaron. De las dos rutas, esta es la que más habla del boceto y del detrás de cámaras.</p>
         <div class="vid plyr" data-provider="vm" data-id="752025612">
           <a class="plyr__out" href="https://vimeo.com/752025612" target="_blank" rel="noopener">Vimeo</a>
@@ -567,20 +563,18 @@ a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
 </section>
 
 
-<section class="block block--tint">
+<section class="block block--tint bgsec" style="--bg:url(img/bg-basural.jpg);--bgpos:right bottom;--veil:#EDF1F6">
   <div class="wrap">
     <p class="seclabel reveal">05 · Las dos opciones, de un vistazo</p>
     <div class="tbl-wrap reveal">
       <table>
         <thead><tr><th></th><th>Opción 1</th><th>Opción 2</th></tr></thead>
         <tbody>
-          <tr><th>Nombre</th><td><b>Técnica mixta en un mismo espacio</b></td><td><b>Cinco técnicas, un mismo plano</b></td></tr>
-          <tr><th>Idea</th><td>Personajes en 2D sobre mundos en 3D e IA, evocando los hitos de la animación. Una sola familia visual.</td><td>Cada técnica de animación es un personaje, con identidad y personalidad propias.</td></tr>
-          <tr><th>Técnicas</th><td>Personajes: cut-out y tradicional. Fondos y ambientes: 3D e IA generativa.</td><td>Boceto, tradicional, 2D cut-out, 3D e IA, cada una resuelta en su propio lenguaje.</td></tr>
-          <tr><th>Personajes</th><td>Dos o tres, misma familia gráfica.</td><td>Cinco, cada uno con universo propio.</td></tr>
-          <tr><th>Rutas narrativas</th><td>Una.</td><td>Dos a elegir: 2A Las cinco identidades, 2B El proceso a la vista.</td></tr>
-          <tr><th>Relación con las ediciones anteriores</th><td>Continúa la línea del festival y le suma una capa.</td><td>Cambia la escala de lo que el festival ha mostrado.</td></tr>
-        </tbody>
+          <tr><th>Nombre</th><td><b>Técnica mixta en un mismo espacio</b></td><td><b>Cinco técnicas, cinco mundos</b></td></tr>
+          <tr><th>Idea</th><td>Todas las técnicas conviven dentro de un mismo espacio. Una sola familia visual.</td><td>Cada técnica tiene su propio plano y su propio mundo, con identidad y reglas propias.</td></tr>
+          <tr><th>Técnicas</th><td>Boceto, cut-out, tradicional, 3D e IA generativa.</td><td>Boceto, cut-out, tradicional, 3D e IA generativa.</td></tr>
+          <tr><th>Personajes</th><td>Dos o tres, misma familia gráfica.</td><td>Cinco en la ruta A, uno solo en la ruta B.</td></tr>
+                            </tbody>
       </table>
     </div>
   </div>
@@ -602,7 +596,7 @@ a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
   </div>
 </section>
 
-<section class="block block--tint">
+<section class="block block--tint bgsec" style="--bg:url(img/bg-bocetos.jpg);--bgpos:right center;--veil:#EDF1F6">
   <div class="wrap">
     <p class="seclabel reveal">07 · Inversión</p>
     <h2 class="bigt reveal">Lo que cuesta <span class="grad">cada camino</span></h2>
@@ -610,11 +604,26 @@ a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
       <table>
         <thead><tr><th>Opción</th><th class="r">Sin IVA</th><th class="r">IVA 19 %</th><th class="r">Total</th></tr></thead>
         <tbody>
-          <tr><td><b>1 · Técnica mixta en un mismo espacio</b></td><td class="r num">$55.000.000</td><td class="r num">$10.450.000</td><td class="r num">$65.450.000</td></tr>
-          <tr><td><b>2 · Cinco técnicas, un mismo plano</b></td><td class="r num">$74.000.000</td><td class="r num">$14.060.000</td><td class="r num">$88.060.000</td></tr>
+          <tr><td><b>1 · Técnica mixta en un mismo espacio</b></td><td class="r num">$47.000.000</td><td class="r num">$8.930.000</td><td class="r num">$55.930.000</td></tr>
+          <tr><td><b>2 · Cinco técnicas, cinco mundos</b></td><td class="r num">$79.000.000</td><td class="r num">$15.010.000</td><td class="r num">$94.010.000</td></tr>
         </tbody>
       </table>
     </div>
+    <p class="seclabel reveal" style="margin-top:clamp(40px,5vw,64px)">Qué incluye</p>
+    <ul class="entreg reveal">
+      <li>Concepto, rutas visuales y diseño de personajes</li>
+      <li>Sistema gráfico: color, tipografía y reglas de uso</li>
+      <li>Afiche del festival y afiche del Mercado</li>
+      <li>Programación impresa y catálogo de industria</li>
+      <li>Adaptaciones para redes, pantallas y espacios del festival</li>
+      <li>Tráiler de lanzamiento de 30 a 40 segundos</li>
+      <li>Video promocional</li>
+      <li>Video de cierre, rodado en El Retiro durante el festival</li>
+      <li>Diseño del stand en el Mercado de Animación</li>
+      <li>Dos charlas o paneles dentro de la programación</li>
+    </ul>
+
+    <p class="seclabel reveal" style="margin-top:clamp(40px,5vw,64px)">Condiciones</p>
     <ul class="cond reveal">
       <li>Vigencia de la cotización: 30 días calendario.</li>
       <li>Forma de pago sugerida: 40 % a la firma, 30 % contra entrega del afiche y el sistema gráfico, 30 % contra entrega del tráiler.</li>
