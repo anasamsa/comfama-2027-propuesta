@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Propuesta creativa de Samsa Studio para la identidad audiovisual del Festival de Animacion Comfama 2027, El Retiro, Antioquia.">
+<meta name="robots" content="noindex">
+<title>Bocetos del mañana · Festival de Animación Comfama 2027 · Samsa Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap">
+<style>
+:root{
+  --ground:#F3F5F8; --tint:#EDF1F6; --ink:#182741; --hero:#0E1B34;
+  --green:#2FA84F; --green-br:#39C25E; --blue:#3B82C4; --blue-br:#54A0E4;
+  --muted:#59626F; --label:#8A94A2; --line:#E2E7EE; --card:#fff; --green-soft:#E9F4EC;
+  --serif:'Montserrat',-apple-system,'Helvetica Neue',Arial,sans-serif;
+  --sans:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;overflow-x:hidden}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;padding-inline:0;padding-block:0}
+img{max-width:100%;display:block}
+p{margin:0}
+h1,h2,h3,h4{margin:0}
+.wrap{max-width:960px;margin:0 auto;padding:0 40px}
+.wide{max-width:1280px;margin:0 auto;padding:0 40px}
+.num{font-variant-numeric:tabular-nums}
+
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:min(86svh,760px);background:var(--hero);color:#fff;overflow:hidden;display:flex}
+.hero__inner{position:relative;z-index:2;max-width:960px;margin:0 auto;padding:34px 40px 44px;width:100%;display:flex;flex-direction:column}
+.hero__bar{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.hero__logo{height:clamp(38px,3.4vw,52px);width:auto}
+.hero__date{font-size:13px;color:#9DB0CC;letter-spacing:.02em}
+.hero__body{flex:1;display:flex;flex-direction:column;justify-content:center;padding:40px 0 20px}
+.hero__eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--green-br);margin:0 0 22px}
+.hero__title{font-family:var(--serif);font-weight:800;font-size:clamp(52px,9.4vw,118px);line-height:1.05;letter-spacing:-.03em;margin:0;padding-block:.04em .02em}
+.hero__title .grad{font-weight:800;padding-right:.03em;background:linear-gradient(96deg,var(--green-br),var(--blue-br));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero__kicker{font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(18px,2.4vw,24px);color:#C3D0E4;margin:20px 0 0}
+.hero__lede{max-width:56ch;color:#AEBED4;font-size:clamp(16.5px,1.5vw,19px);line-height:1.6;margin:30px 0 0}
+.facts{display:flex;flex-wrap:wrap;gap:14px 40px;margin:44px 0 0;padding-top:30px;border-top:1px solid rgba(255,255,255,.14)}
+.fact{display:flex;flex-direction:column;gap:3px}
+.fact__v{font-family:var(--serif);font-size:clamp(24px,3.2vw,36px);font-weight:400;line-height:1;color:#fff}
+.fact:first-child .fact__v{color:var(--green-br)}
+.fact__k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8FA1BC}
+
+.aurora{position:absolute;inset:0;z-index:1;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;will-change:transform}
+.blob.b1{width:52vw;height:52vw;left:-12vw;top:-14vw;background:radial-gradient(circle,#2EBE63,transparent 62%);animation:drift1 20s ease-in-out infinite}
+.blob.b2{width:46vw;height:46vw;right:-10vw;top:6vw;background:radial-gradient(circle,#2F79C8,transparent 62%);animation:drift2 24s ease-in-out infinite}
+.blob.b3{width:40vw;height:40vw;left:26vw;bottom:-18vw;background:radial-gradient(circle,#1FA0A6,transparent 62%);animation:drift3 28s ease-in-out infinite}
+@keyframes drift1{0%,100%{transform:translate(0,0)}50%{transform:translate(6vw,4vw)}}
+@keyframes drift2{0%,100%{transform:translate(0,0)}50%{transform:translate(-5vw,5vw)}}
+@keyframes drift3{0%,100%{transform:translate(0,0)}50%{transform:translate(4vw,-4vw)}}
+
+/* ---------- blocks ---------- */
+.block{padding:88px 0}
+.block--tint{background:var(--tint)}
+.seclabel{font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin:0 0 34px;display:flex;align-items:center;gap:18px}
+.seclabel::after{content:"";flex:1;height:1px;background:var(--line)}
+
+.bigt{font-family:var(--serif);font-weight:800;font-size:clamp(34px,5.4vw,68px);line-height:1.1;padding-block:.04em .03em;letter-spacing:-.015em;margin:0}
+.bigt .grad{font-weight:800;padding-right:.03em;background:linear-gradient(96deg,var(--green),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.body-lg{font-size:17px;color:var(--muted);line-height:1.68;max-width:66ch}
+.body-lg p + p{margin-top:15px}
+
+/* bloque de concepto a dos columnas */
+.concept{display:grid;grid-template-columns:1fr;gap:clamp(26px,3vw,54px);align-items:start}
+@media(min-width:960px){.concept{grid-template-columns:1.04fr 1fr;gap:clamp(40px,5vw,86px)}}
+.concept .bigt{font-size:clamp(32px,4.4vw,56px)}
+.concept__body{font-size:16.5px;color:var(--muted);line-height:1.68;max-width:52ch}
+.concept__body p + p{margin-top:15px}
+.concept__end{
+  margin-top:26px;padding-top:22px;border-top:1px solid var(--line);
+  font-family:var(--serif);font-weight:600;
+  font-size:clamp(19px,2vw,24px);line-height:1.3;color:var(--ink);
+}
+
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+
+/* donde vive la imagen */
+.apps{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:clamp(30px,4vw,48px)}
+@media(min-width:720px){.apps{grid-template-columns:repeat(3,1fr)}}
+.app{background:var(--card);padding:20px 22px 22px;display:flex;flex-direction:column;gap:5px}
+.app b{font-size:14.5px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+.app span{font-size:12.5px;color:var(--muted);line-height:1.45}
+.app--v b{color:var(--green)}
+.wide .pill{padding:32px 34px 34px}
+.wide .pill__k{font-size:22px}
+.wide .pill p{font-size:14.5px}
+.pill{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 26px 28px;position:relative;overflow:hidden;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s ease,border-color .3s ease}
+.pill::after{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--aurora,linear-gradient(96deg,#39C25E,#54A0E4));opacity:0;transition:opacity .3s ease}
+.pill:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(24,39,65,.13);border-color:#CBD6E4}
+.pill:hover::after{opacity:1}
+.pill__k{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--ink);line-height:1.2;margin:0 0 12px}
+.pill__k .g{color:var(--green)}
+.pill p{font-size:14px;color:var(--muted);line-height:1.6}
+.pill p + p{margin-top:10px}
+
+/* ---------- media ---------- */
+.mediaband{background:var(--hero)}
+.media{position:relative;display:block;text-decoration:none;color:inherit;overflow:hidden;background:var(--hero)}
+.media img{width:100%;object-fit:cover;aspect-ratio:16/9;transition:transform .6s cubic-bezier(.22,1,.36,1),opacity .3s}
+.media:hover img,.media:focus-visible img{transform:scale(1.035);opacity:.85}
+.media.cine img{aspect-ratio:16/9}
+.reelband{background:var(--hero)}
+.reel{display:block;position:relative;overflow:hidden;background:var(--hero);text-decoration:none;color:inherit}
+.reel img{width:100%;aspect-ratio:21/9;object-fit:cover;transition:transform .7s cubic-bezier(.22,1,.36,1)}
+.reel:hover img,.reel:focus-visible img{transform:scale(1.03)}
+.reel__bar{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:clamp(22px,4vw,54px);background:linear-gradient(to top,rgba(14,27,52,.94),rgba(14,27,52,.4) 62%,transparent);color:#fff}
+.reel__l b{display:block;font-family:var(--serif);font-weight:700;font-size:clamp(24px,4vw,52px);line-height:1.14;letter-spacing:-.015em}
+.reel__l span{font-size:clamp(13px,1.4vw,16px);color:#AEBED4;display:block;margin-top:7px;max-width:44ch}
+
+/* grillas a sangre */
+.bleed{width:100%;display:grid;gap:2px;background:var(--line)}
+.bleed--2{grid-template-columns:repeat(2,1fr)}
+.bleed--4{grid-template-columns:repeat(2,1fr)}
+@media(min-width:900px){.bleed--4{grid-template-columns:repeat(4,1fr)}}
+.bleed--3{grid-template-columns:repeat(2,1fr)}
+@media(min-width:820px){.bleed--3{grid-template-columns:repeat(3,1fr)}}
+.bleed .cell{position:relative;background:var(--card);overflow:hidden}
+.bleed .cell img{width:100%;object-fit:cover;transition:transform .7s cubic-bezier(.22,1,.36,1)}
+.bleed .cell:hover img{transform:scale(1.04)}
+.bleed--4 .cell img{aspect-ratio:3/4}
+.bleed--cap .cell img{aspect-ratio:4/3}
+.bleed--2 .cell img{aspect-ratio:16/10}
+.bleed--3 .cell img{aspect-ratio:4/3}
+.bleed .cap2{position:absolute;left:0;right:0;bottom:0;padding:clamp(14px,1.8vw,24px);background:linear-gradient(to top,rgba(14,27,52,.93),rgba(14,27,52,.4) 65%,transparent);color:#fff}
+.bleed .cap2 b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(15px,1.6vw,20px);line-height:1.15}
+.bleed .cap2 span{display:block;font-size:clamp(11.5px,1.1vw,13px);color:#C3D0E4;line-height:1.4;margin-top:4px}
+.reel__cta{display:inline-flex;align-items:center;gap:9px;padding:11px 22px;border-radius:40px;background:linear-gradient(96deg,var(--green-br),var(--blue-br));color:#0E1B34;font-weight:800;font-size:13.5px;white-space:nowrap}
+.reel__cta::before{content:"";border-left:11px solid #0E1B34;border-top:7px solid transparent;border-bottom:7px solid transparent}
+
+.minihitos{display:flex;flex-wrap:wrap;gap:16px;margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+.mh{display:flex;gap:12px;align-items:flex-start;flex:1 1 280px;min-width:0}
+.mh img{flex:none;width:92px;height:70px;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
+.mh div{min-width:0}
+.mh b{display:block;font-family:var(--serif);font-weight:500;font-size:14px;color:var(--ink);margin-bottom:3px}
+.mh span{font-size:12.5px;color:var(--muted);line-height:1.45;display:block}
+
+.posters{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px;max-width:620px}
+@media(min-width:620px){.posters{grid-template-columns:repeat(3,1fr)}}
+.posters img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
+.poster-note{font-size:12.5px;color:var(--label);margin-top:14px}
+th.r,td.r{text-align:right}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* ---------- inline players ---------- */
+.plyr{position:relative;cursor:pointer}
+.plyr iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5;background:#000}
+.plyr.playing .media__ov,.plyr.playing .media__play,.plyr.playing .reel__bar{display:none}
+.plyr.playing img{visibility:hidden}
+.nojs-note{display:none;font-size:12px;color:var(--label);margin-top:10px;line-height:1.5}
+.preview .nojs-note{display:block}
+.plyr__out{position:absolute;top:14px;right:14px;z-index:6;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:rgba(14,27,52,.72);padding:7px 13px;border-radius:30px;text-decoration:none;backdrop-filter:blur(6px)}
+.plyr__out:hover{background:rgba(14,27,52,.95)}
+.plyr__hit{position:absolute;inset:0;z-index:4;display:block;text-indent:-9999px;overflow:hidden}
+.plyr.playing .plyr__hit{display:none}
+.media__ov{position:absolute;left:0;right:0;bottom:0;padding:clamp(20px,3vw,40px);background:linear-gradient(to top,rgba(14,27,52,.97) 0%,rgba(14,27,52,.84) 36%,rgba(14,27,52,.46) 72%,transparent 100%);color:#fff;display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;text-shadow:0 1px 14px rgba(14,27,52,.5)}
+.media__k{font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#6FE39A}
+.media__t{font-family:var(--serif);font-weight:600;font-size:clamp(20px,2.8vw,34px);line-height:1.2;margin-top:7px;max-width:22ch}
+.media__s{font-size:12.5px;color:#9DB0CC;white-space:nowrap}
+.media__play{position:absolute;top:clamp(18px,2.4vw,30px);left:clamp(18px,2.4vw,30px);width:46px;height:46px;border-radius:50%;background:linear-gradient(96deg,var(--green-br),var(--blue-br));display:grid;place-items:center;box-shadow:0 8px 24px rgba(14,27,52,.35)}
+.media__play::after{content:"";border-left:14px solid #0E1B34;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:3px}
+.duo{display:grid;grid-template-columns:1fr;gap:2px;background:var(--hero)}
+@media(min-width:760px){.duo{grid-template-columns:1fr 1fr}}
+
+.figcap{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.figcap img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.figcap .c{padding:18px 22px 22px}
+.figcap .c b{display:block;font-family:var(--serif);font-weight:400;font-size:18px;margin-bottom:5px}
+.figcap .c span{font-size:13.5px;color:var(--muted);line-height:1.5}
+
+.ips{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:26px}
+@media(min-width:860px){.ips{grid-template-columns:repeat(4,1fr)}}
+.ip{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.ip img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.ip .c{padding:15px 17px 18px}
+.ip .c b{display:block;font-family:var(--serif);font-weight:400;font-size:17px;margin-bottom:4px}
+.ip .c span{font-size:12.5px;color:var(--muted);line-height:1.45}
+
+/* banda de marcas a todo el ancho */
+.marcasband{background:var(--tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:clamp(46px,6.5vw,92px) 0}
+.marcasband .inner{max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,64px)}
+.marcasband .k{font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--label);text-align:center;margin-bottom:clamp(24px,3vw,40px)}
+.marcasband img{width:100%;height:auto}
+
+/* ---------- slot ---------- */
+.slot{background:var(--card);border:1px dashed #BFCBDA;border-radius:14px;padding:34px 26px;text-align:center;display:grid;gap:8px;place-content:center;min-height:210px}
+.slot__k{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--blue)}
+.slot__t{font-family:var(--serif);font-size:21px;font-weight:460}
+.slot__f{font-size:12.5px;color:var(--label);max-width:40ch;margin:0 auto}
+
+/* ---------- option packs ---------- */
+.pack{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:34px 36px 36px;margin-top:26px}
+.pack__head{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.pack__no{flex:none;width:38px;height:38px;border-radius:9px;background:var(--ink);color:#fff;font-family:var(--serif);font-size:18px;font-weight:500;display:flex;align-items:center;justify-content:center}
+.pack__t{font-family:var(--serif);font-size:clamp(24px,3.4vw,36px);font-weight:700;line-height:1.18;margin:0}
+.pack__sub{font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(17px,2vw,21px);color:var(--muted);margin:10px 0 0}
+.pack__price{font-family:var(--serif);font-size:clamp(24px,3vw,32px);font-weight:400;color:var(--ink);white-space:nowrap;line-height:1}
+.pack__price .cur{display:block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:7px}
+.pack__body{margin-top:24px;font-size:15px;color:var(--muted);line-height:1.68;max-width:70ch}
+.pack__body p + p{margin-top:13px}
+
+.route{margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
+/* tabs de rutas */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
+.tab{
+  font-family:var(--sans);font-size:13.5px;font-weight:700;letter-spacing:.01em;
+  border:1px solid var(--line);background:var(--card);color:var(--muted);
+  padding:13px 22px;border-radius:40px;cursor:pointer;
+  transition:color .25s ease,border-color .25s ease,transform .25s ease,box-shadow .25s ease;
+}
+.tab:hover{color:var(--ink);border-color:#C3D0E4;transform:translateY(-2px)}
+.tab .n{font-family:var(--serif);font-weight:500;margin-right:9px;font-size:15px}
+.tab[aria-selected="true"]{
+  background:linear-gradient(96deg,var(--green-br),var(--blue-br));
+  color:#0E1B34;border-color:transparent;box-shadow:0 10px 26px rgba(47,168,79,.26);
+}
+.panel{margin-top:26px;padding-top:24px;border-top:1px solid var(--line);animation:fadein .4s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.vid{display:block;position:relative;margin-top:24px;border-radius:14px;overflow:hidden;background:var(--hero);cursor:pointer;text-decoration:none}
+.vid img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .6s cubic-bezier(.22,1,.36,1)}
+.vid:hover img{transform:scale(1.03)}
+.vid__ov{position:absolute;left:0;right:0;bottom:0;padding:clamp(18px,2.6vw,30px);background:linear-gradient(to top,rgba(14,27,52,.97) 0%,rgba(14,27,52,.86) 34%,rgba(14,27,52,.5) 72%,transparent 100%);color:#fff;display:block;text-shadow:0 1px 14px rgba(14,27,52,.5)}
+.vid__ov .media__k{display:block}
+.vid__t{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(18px,2.2vw,26px);line-height:1.2;margin-top:6px}
+.vid__m{display:block;font-size:12px;color:#9DB0CC;margin-top:5px}
+.panel__t{font-family:var(--serif);font-size:clamp(21px,2.6vw,28px);font-weight:700;line-height:1.2;margin:0 0 14px}
+.panel p{font-size:14.5px;color:var(--muted);line-height:1.65;max-width:68ch}
+.panel p + p{margin-top:12px}
+@media (prefers-reduced-motion:reduce){.panel{animation:none}.pill:hover{transform:none}.tab:hover{transform:none}}
+.route__k{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.route__t{font-family:var(--serif);font-size:clamp(20px,2.4vw,26px);font-weight:400;margin:0 0 12px}
+.route p{font-size:14.5px;color:var(--muted);line-height:1.65;max-width:68ch}
+.route p + p{margin-top:12px}
+.claim{font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(19px,2.4vw,26px);color:var(--ink);margin-top:20px;line-height:1.25;max-width:24ch}
+
+/* ---------- tables ---------- */
+.tbl-wrap{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:14px}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
+thead th{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--label);font-weight:700;text-align:left;padding:18px 20px 12px;border-bottom:1px solid var(--line)}
+tbody td,tbody th{padding:14px 20px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+tbody th{font-weight:600;color:var(--label);font-size:12px;letter-spacing:.04em;text-transform:uppercase;width:20%}
+tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
+td b{font-weight:700}
+.chars td:first-child{font-family:var(--serif);font-size:16px;font-weight:500;width:18%}
+tr.money th{color:var(--ink);font-size:12px}
+tr.money td{font-family:var(--serif);font-size:clamp(20px,2.6vw,26px);font-weight:500;color:var(--ink)}
+tr.money{background:var(--green-soft)}
+
+ul.cond{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:10px;max-width:72ch}
+ul.cond li{position:relative;padding-left:22px;font-size:14.5px;color:var(--muted);line-height:1.55}
+ul.cond li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;background:var(--green);border-radius:2px}
+
+.timeline{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 28px}
+.tlrow{display:flex;gap:22px;padding:18px 0;border-top:1px solid var(--line);align-items:baseline;flex-wrap:wrap}
+.tlrow:first-child{border-top:0}
+.tlrow__d{flex:none;width:210px;font-family:var(--serif);font-size:16px;font-weight:500;color:var(--ink)}
+.tlrow__t{font-size:14.5px;color:var(--muted);flex:1 1 200px;min-width:0}
+
+/* ---------- closing ---------- */
+.closing{position:relative;background:var(--hero);color:#fff;overflow:hidden;padding:110px 0}
+.aurora--soft .blob{opacity:.4}
+.closing__inner{position:relative;z-index:2;max-width:960px;margin:0 auto;padding:0 40px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.closing__eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--green-br);margin:0 0 18px}
+.closing__title{font-family:var(--serif);font-size:clamp(40px,6.5vw,74px);font-weight:800;line-height:1.08;margin:0;letter-spacing:-.03em;padding-block:.04em .03em}
+.closing__title .grad{font-weight:800;padding-right:.03em;background:linear-gradient(96deg,var(--green-br),var(--blue-br));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.closing__sub{max-width:52ch;color:#AEBED4;margin:22px 0 0;font-size:16px;line-height:1.6}
+.closing__logo{height:clamp(36px,3.2vw,46px);width:auto;margin:44px 0 0;opacity:.95}
+
+.foot{background:var(--ground);padding:26px 0}
+.foot__row{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.foot__logo{height:34px;width:auto;opacity:.9}
+.foot__note{font-size:12.5px;color:var(--label)}
+a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+
+/* pares que colapsan */
+.cols2{grid-template-columns:repeat(2,1fr);margin-top:26px}
+
+@media (max-width:820px){
+  .cols3{grid-template-columns:1fr}
+  .tlrow__d{width:100%}
+}
+@media (max-width:680px){
+  .cols2{grid-template-columns:1fr}
+  .duo{grid-template-columns:1fr}
+  .ips{gap:12px}
+  .posters{gap:9px}
+  .pack__head{gap:14px}
+  .pack__price{font-size:22px}
+  .minihitos{gap:14px}
+  .mh{flex:1 1 100%}
+}
+@media (max-width:420px){
+  .wrap,.wide,.hero__inner,.closing__inner{padding-left:18px;padding-right:18px}
+  .hero__title{font-size:clamp(40px,12vw,58px)}
+  .facts{gap:14px 20px}
+  .fact__v{font-size:22px}
+  .reel__bar{padding:15px 17px}
+  .reel__cta{width:100%;justify-content:center}
+  .pill,.pack{padding-left:19px;padding-right:19px}
+  .mh img{width:74px;height:58px}
+  .posters{gap:8px}
+  .plyr__out{top:10px;right:10px;padding:6px 10px;font-size:10.5px}
+  .media__ov{padding:16px}
+}
+@media (max-width:720px){
+  .wrap,.wide,.hero__inner,.closing__inner{padding-left:22px;padding-right:22px}
+  .block{padding:60px 0}
+  .pack{padding:26px 22px 28px}
+  .facts{gap:16px 26px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .blob{animation:none!important}
+}
+@media print{
+  :root{--ground:#fff;--tint:#fff}
+  body{background:#fff;font-size:11.5px}
+  .aurora{display:none!important}
+  .js .reveal{opacity:1!important;transform:none!important}
+  .hero,.closing{background:#fff!important;color:var(--ink)!important;min-height:auto;padding:0 0 18px}
+  .hero__title,.closing__title{color:var(--ink)!important;font-size:40px}
+  .hero__logo,.closing__logo{filter:invert(1) grayscale(1) brightness(.3)}
+  .hero__kicker,.hero__lede,.closing__sub{color:var(--muted)!important}
+  .fact__v{color:var(--ink)!important}
+  .pack,.tbl-wrap,.timeline{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+
+
+<header class="hero">
+  <div class="aurora"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+  <div class="hero__inner">
+    <div class="hero__bar">
+      <img class="hero__logo" src="img/logo-samsa.png" alt="Samsa Creative">
+      <span class="hero__date">Propuesta · Septiembre 2026</span>
+    </div>
+    <div class="hero__body">
+      <p class="hero__eyebrow">Festival de Animación Comfama · Edición 2027</p>
+      <h1 class="hero__title">Bocetos <span class="grad">del mañana</span></h1>
+      <p class="hero__lede">
+        El Retiro es donde todas las formas de animar se encuentran antes de que el país las lleve a Annecy.
+        Esta es nuestra propuesta creativa para la identidad audiovisual de la cuarta edición.
+      </p>
+    </div>
+  </div>
+</header>
+
+<section class="reelband">
+  <div class="reel plyr" data-provider="yt" data-id="ZSa2pcVe1dU" >
+      <a class="plyr__out" href="https://youtu.be/ZSa2pcVe1dU" target="_blank" rel="noopener">YouTube</a>
+      <img src="img/ref-reel.jpg" alt="Fotograma del reel de Samsa Creative.">
+      <span class="reel__bar">
+        <span class="reel__l"><b>Reel Samsa Creative</b><span>Diez años de animación 2D, 3D, motion y producción con IA.</span></span>
+        <span class="reel__cta">Ver el reel</span>
+      </span>
+  </div>
+</section>
+<div class="wrap"><p class="nojs-note">El video se reproduce dentro de la página cuando esta se publica en su dominio. En esta vista previa el reproductor viene bloqueado, use el botón de YouTube.</p></div>
+
+<section class="block">
+  <div class="wide">
+    <p class="seclabel reveal">01 · Quiénes somos</p>
+    <h2 class="bigt reveal">Por qué este reto <span class="grad">es para nosotros</span></h2>
+    <div class="cols3">
+      <div class="pill reveal">
+        <p class="pill__k">La técnica mixta <span class="g">es nuestra génesis</span></p>
+        <p>Desde nuestros primeros proyectos hemos encontrado en la mezcla de técnicas una de nuestras principales formas de expresión: un personaje dibujado a mano puede convivir con un escenario 3D, una textura puede estar construida digitalmente, una animación tradicional puede encontrarse con elementos generados.</p>
+        <p>Llevamos diez años combinando dibujo, 3D, motion y, desde hace tres, IA generativa dentro del mismo pipeline. No es un experimento, es nuestra forma de trabajar.</p>
+      </div>
+      <div class="pill reveal">
+        <p class="pill__k">Somos un ecosistema <span class="g">descentralizado</span></p>
+        <p>Nuestro estudio nació en Pereira hace diez años. Hoy tenemos equipo en Colombia, Argentina y España, y seguimos operando desde ahí.</p>
+        <p>El documento curatorial pregunta cómo se construye un ecosistema de animación que no dependa solo de Bogotá o Medellín. Nosotros somos parte de esa respuesta.</p>
+      </div>
+      <div class="pill reveal">
+        <p class="pill__k">Sabemos <span class="g">contar historias</span></p>
+        <p>Además de producir para marcas, desarrollamos propiedad intelectual propia: <i>Frui</i>, largometraje animado en coproducción entre Colombia y Argentina; <i>Katú y el bosque mágico</i>, serie y largometraje en desarrollo; <i>Soro</i>, serie vertical con IA; y <i>Lucky Bastards Studio</i>, nuestra línea de videojuegos.</p>
+        <p>Sabemos lo que es diseñar personajes que tienen que sostener una historia, no solo una campaña. Esa es la experiencia que traemos.</p>
+              </div>
+    </div>
+
+    </div>
+  </section>
+  <div class="bleed bleed--3 bleed--cap">
+    <div class="cell"><img src="img/cap-2d.jpg" style="object-position:50% 0" alt="Ilustración 2D de un personaje en una calle, producida por Samsa."><div class="cap2"><b>Animación 2D</b><span>Diseño y animación de personajes.</span></div></div>
+    <div class="cell"><img src="img/w-personajes.jpg" alt="Diseño de tres personajes 3D con sombrero de copa."><div class="cap2"><b>Diseño de personajes</b><span>Del boceto al modelo listo para animar.</span></div></div>
+    <div class="cell"><img src="img/w-3d.jpg" alt="Fotograma 3D de una niña en un bosque de otoño."><div class="cap2"><b>3D</b><span>Modelado, materiales e iluminación.</span></div></div>
+    <div class="cell"><img src="img/cap-mixta.jpg" alt="Pieza de Samsa que combina varias técnicas en el mismo plano."><div class="cap2"><b>Técnica mixta</b><span>Varias maneras de hacer en el mismo plano.</span></div></div>
+    <div class="cell"><img src="img/w-motion.jpg" alt="Pieza de motion graphics en 3D producida por Samsa."><div class="cap2"><b>Motion</b><span>Piezas gráficas en movimiento.</span></div></div>
+    <div class="cell"><img src="img/sm-post.jpg" alt="Pieza de postproducción de Samsa."><div class="cap2"><b>Postproducción</b><span>Composición, color y acabado final.</span></div></div>
+  </div>
+  <section class="marcasband">
+    <div class="inner reveal">
+      <p class="k">Marcas para las que hemos producido</p>
+      <img src="img/marcas.png" alt="Marcas para las que ha producido Samsa.">
+    </div>
+  </section>
+  <p class="body-lg reveal" style="margin-top:clamp(34px,4vw,54px);max-width:62ch">Key visuals que hemos hecho para marcas. Una imagen de la que después bajan todos los formatos.</p>
+  <div class="bleed bleed--3" style="margin-top:22px">
+    <div class="cell"><img src="img/kv-puma.jpg" alt="Key visual de Puma SS23 producido por Samsa."><div class="cap2"><b>Puma SS23</b><span>Key visual de campaña.</span></div></div>
+    <div class="cell"><img src="img/kv-chevy.jpg" alt="Key visual de Chevrolet Silverado producido por Samsa."><div class="cap2"><b>Chevrolet Silverado</b><span>Key visual en 3D.</span></div></div>
+    <div class="cell"><img src="img/kv-becas.jpg" alt="Ilustración de campaña producida por Samsa."><div class="cap2"><b>Mexicana de Becas</b><span>Imagen de campaña en 2D.</span></div></div>
+  </div>
+
+<section class="block block--tint">
+  <div class="wide">
+    <p class="seclabel reveal">02 · El concepto</p>
+    <div class="concept">
+      <h2 class="bigt reveal">Un boceto no es una versión incompleta de algo terminado: <span class="grad">es una posibilidad.</span></h2>
+      <div class="concept__body reveal">
+        <p>Y nunca aparece una sola. Ahora mismo conviven todas las maneras de trazar: la mano, el software, el motor de juego, la máquina que genera. Ninguna reemplazó a la anterior, y ninguna reemplazó a quien decide qué se dibuja.</p>
+        <p>Esa convivencia es lo que va a quedar retratado de estos años, aunque nadie se lo haya propuesto. Y a nosotros nos parece un motivo de fiesta antes que un problema por resolver. El Retiro es justo donde esas maneras se encuentran, el último punto de reunión antes de que el país las lleve a Annecy.</p>
+        <p class="concept__end">Frente a un futuro que todavía estamos dibujando, todas esas posibilidades están en el mismo plano.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wide">
+    <p class="seclabel reveal">03 · La imagen</p>
+    <h2 class="bigt reveal">“Bocetos del mañana” debe representarse <span class="grad">en una imagen.</span></h2>
+    <p class="body-lg reveal" style="margin-top:24px;max-width:62ch">Antes que un video, esta edición necesita una imagen: la que va en el afiche, se repite en la programación, se proyecta en la pantalla del parque y se reconoce después en redes. Esa imagen es el concepto resuelto en un solo plano.</p>
+    <p class="body-lg reveal" style="margin-top:15px;max-width:62ch">Todo lo demás sale de ahí, incluido el tráiler. Por eso las dos opciones que siguen se diferencian en cómo se construye esa imagen, y no en lo que pasa durante los treinta segundos.</p>
+    <div class="apps reveal">
+      <div class="app"><b>Afiche del festival</b><span>La pieza madre. De ella salen el color, la tipografía y los personajes.</span></div>
+      <div class="app"><b>Afiche del Mercado</b><span>Misma familia, tono de industria.</span></div>
+      <div class="app"><b>Programación impresa</b><span>El sistema aplicado a tablas y horarios sin perder carácter.</span></div>
+      <div class="app"><b>Catálogo de industria</b><span>Portada, diagramación y páginas tipo.</span></div>
+      <div class="app"><b>Redes</b><span>Adaptaciones verticales, cuadradas y de historia.</span></div>
+      <div class="app"><b>Pantallas y espacios</b><span>Señalética, escenario y proyección del festival.</span></div>
+      <div class="app app--v"><b>Tráiler de lanzamiento</b><span>La imagen puesta en movimiento. 30 a 40 segundos.</span></div>
+      <div class="app app--v"><b>Video promocional</b><span>Versión corta para difusión.</span></div>
+      <div class="app app--v"><b>Video de cierre</b><span>Rodado en El Retiro durante el festival.</span></div>
+      <div class="app"><b>Stand del Mercado</b><span>Diseño de nuestro espacio en la feria.</span></div>
+      <div class="app"><b>Sistema gráfico</b><span>Color, tipografía y reglas de uso para que el equipo del festival lo aplique solo.</span></div>
+      <div class="app"><b>Dos charlas</b><span>Nuestra participación en la programación.</span></div>
+    </div>
+    <p class="body-lg reveal" style="margin-top:clamp(34px,4vw,54px);max-width:62ch">Afiches que hemos hecho para nuestras propias historias. La misma tarea: encontrar la imagen que sostiene todo lo demás.</p>
+  </div>
+  <div class="bleed bleed--4">
+    <div class="cell"><img src="img/ip-frui.jpg" alt="Afiche de Frui, largometraje animado de Samsa."><div class="cap2"><b>Frui</b><span>Largometraje animado en desarrollo. Coproducción con Argentina.</span></div></div>
+    <div class="cell"><img src="img/ip-katu.jpg" alt="Afiche de Katu y el bosque magico."><div class="cap2"><b>Katú y el bosque mágico</b><span>Serie y largometraje animado en desarrollo.</span></div></div>
+    <div class="cell"><img src="img/ip-soro.jpg" alt="Portada de Soro, serie animada en formato vertical."><div class="cap2"><b>Soro</b><span>Serie animada en formato vertical con inteligencia artificial.</span></div></div>
+    <div class="cell"><img src="img/ip-rampage.jpg" alt="Portada de un videojuego de Lucky Bastards Studio."><div class="cap2"><b>Lucky Bastards Studio</b><span>Nuestra línea de videojuegos.</span></div></div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <p class="seclabel reveal">04 · Propuestas creativas</p>
+    <h2 class="bigt reveal">Dos caminos <span class="grad">creativos</span></h2>
+    <p class="body-lg reveal" style="margin-top:22px;max-width:56ch">Las dos responden al concepto de esta edición. Cambian en la escala de producción y en cuántos lenguajes terminan conviviendo en pantalla.</p>
+    <div class="pack reveal" style="margin-top:38px">
+      <div class="pack__head">
+        <div style="display:flex;gap:16px;align-items:flex-start;flex:1 1 220px;min-width:0">
+          <span class="pack__no">1</span>
+          <div>
+            <h3 class="pack__t">Técnica mixta en un mismo espacio</h3>
+            <p class="pack__sub">Un homenaje a la animación.</p>
+          </div>
+        </div>
+      </div>
+      <div class="pack__body">
+        <p>La imagen de la edición es un plano donde conviven varias maneras de dibujar, y el afiche es un fotograma de ese plano. Personajes en 2D, unos animados en cut-out y otros cuadro a cuadro según lo que pida la escena, caminando por un mundo construido en 3D con ambientes y texturas generadas con IA. El boceto queda a la vista todo el tiempo: líneas de construcción, correcciones, trazos que nadie borró.</p>
+        <p>Y mientras eso pasa, los personajes y los objetos van citando hitos de la historia de la animación, del zoótropo a la línea blanca de <i>Fantasmagorie</i>. Cada uno de esos inventos llegó anunciando que reemplazaba al anterior. Ninguno lo logró. Siguen todos ahí, igual que las técnicas.</p>
+        <p>La pieza termina en El Retiro, levantado en 3D con la arquitectura del municipio, y en la gente sentada frente a la pantalla al aire libre. Que es, al final, donde empezó todo esto.</p>
+      </div>
+      <div class="minihitos">
+        <div class="mh">
+          <img src="img/zoetrope.jpg" alt="Zoótropo, tambor con ranuras verticales.">
+          <div><b>1834 · El zoótropo</b><span>Un tambor con ranuras y un grupo asomándose al mismo tiempo.</span></div>
+        </div>
+        <div class="mh">
+          <img src="img/fantasmagorie.gif" alt="Fragmento animado de Fantasmagorie, una línea blanca que se transforma.">
+          <div><b>1908 · Fantasmagorie</b><span>La primera película enteramente animada es una línea que no se corta.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="duo">
+<div class="media plyr" data-provider="yt" data-id="OuQ1K6GjEDc" ><a class="plyr__out" href="https://www.youtube.com/watch?v=OuQ1K6GjEDc" target="_blank" rel="noopener">YouTube</a>
+    <img src="img/ref-gumball.jpg" alt="Fotograma de The Amazing World of Gumball con varias técnicas en el mismo plano.">
+    <span class="media__play"></span>
+    <span class="media__ov"><span><span class="media__k">Referencia · técnicas conviviendo</span><span class="media__t">The Wattersons Origin Stories</span></span><span class="media__s">Gumball</span></span>
+  </div>
+  <div class="media plyr" data-provider="vm" data-id="759495417" ><a class="plyr__out" href="https://vimeo.com/759495417" target="_blank" rel="noopener">Vimeo</a>
+    <img src="img/ref-skyweaver.jpg" alt="Fotograma de Welcome to Skyweaver, producido por Samsa Studio.">
+    <span class="media__play"></span>
+    <span class="media__ov"><span><span class="media__k">Producción propia · 2D sobre mundos 3D</span><span class="media__t">Welcome to Skyweaver</span></span><span class="media__s">Samsa Studio</span></span>
+  </div>
+</div>
+
+<section class="block">
+  <div class="wrap">
+    <div class="pack reveal" style="margin-top:0">
+      <div class="pack__head">
+        <div style="display:flex;gap:16px;align-items:flex-start;flex:1 1 220px;min-width:0">
+          <span class="pack__no">2</span>
+          <div>
+            <h3 class="pack__t">Cinco técnicas, un mismo plano</h3>
+            <p class="pack__sub">Qué pasaría si cada técnica de animación fuera un personaje?</p>
+          </div>
+        </div>
+      </div>
+      <div class="pack__body">
+        <p>Cinco personajes, cada uno construido desde un lenguaje distinto y con identidad visual propia. Funcionan juntos en el afiche y por separado en cada pieza: uno por cada día de programación, uno por cada formato de redes, los cinco en el plano final.</p>
+      </div>
+
+      <div class="tbl-wrap" style="margin-top:26px">
+        <table class="chars">
+          <thead><tr><th>Personaje</th><th>Cómo está hecho y quién es</th></tr></thead>
+          <tbody>
+            <tr><td>Boceto</td><td>Todavía está encontrando su forma. Líneas sueltas, correcciones y anotaciones al margen. Es el más tímido del grupo y se siente en desventaja frente a los otros.</td></tr>
+            <tr><td>Tradicional</td><td>Construido cuadro a cuadro, con la expresividad y la imperfección del dibujo hecho a mano. El que lleva más tiempo en esto.</td></tr>
+            <tr><td>2D cut-out</td><td>Formado por piezas, capas y articulaciones. Sus movimientos revelan la lógica de construcción de la técnica. Funciona bajo sus propias reglas.</td></tr>
+            <tr><td>3D</td><td>Volumen, iluminación y materiales. Habita el espacio de otra manera. Un poco prepotente.</td></tr>
+            <tr><td>IA</td><td>Una forma nueva de generar imagen y movimiento. No vino a reemplazar a nadie, es una herramienta más.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Rutas narrativas de la opción 2">
+        <button class="tab" id="t2a" role="tab" aria-selected="true" aria-controls="p2a"><span class="n">2A</span>Las cinco identidades</button>
+        <button class="tab" id="t2b" role="tab" aria-selected="false" aria-controls="p2b"><span class="n">2B</span>El proceso a la vista</button>
+      </div>
+
+      <div class="panel" id="p2a" role="tabpanel" aria-labelledby="t2a">
+        <h4 class="panel__t route__t">Las cinco identidades</h4>
+        <p>Los cinco están ahí desde el principio, cada uno convencido de que su manera es la correcta. Eso no termina en pelea sino en una competencia con humor: cada técnica quiere lucirse en lo que mejor sabe hacer. Uno corre, otro nada, otro boxea, y cada escena está resuelta con el lenguaje de esa técnica. Van por caminos distintos y terminan cruzando la meta juntos.</p>
+        <p>El plano final los junta a todos en El Retiro, en una sola composición. El guiño al videojuego entra por lo visual y no por la trama: una interfaz que presenta a los personajes, un momento de selección, una cámara que se mueve como en un juego.</p>
+        <p class="claim">Un mismo festival. Un mismo territorio. Muchas formas de animar.</p>
+        <div class="vid plyr" data-provider="yt" data-id="mRSvq3NYQKg">
+          <a class="plyr__out" href="https://www.youtube.com/watch?v=mRSvq3NYQKg" target="_blank" rel="noopener">YouTube</a>
+          <img src="img/ref-spiderverse.jpg" alt="Fotograma de Into the Spider-Verse con personajes de universos distintos.">
+          <span class="media__play"></span>
+          <span class="vid__ov"><span class="media__k">Referencia · muchos personajes, un mismo plano</span><span class="vid__t">Into the Spider-Verse</span></span>
+        </div>
+      </div>
+
+      <div class="panel" id="p2b" role="tabpanel" aria-labelledby="t2b" hidden>
+        <h4 class="panel__t route__t">El proceso a la vista</h4>
+        <p>Un mismo personaje atraviesa las cinco técnicas. Empieza como boceto, líneas que todavía no saben en qué se van a convertir, y va mutando: se vuelve dibujo tradicional, se articula en cut-out, gana volumen en 3D, se expande con IA. No va de peor a mejor. Es el mismo personaje mostrándose de cinco maneras, y cada una le da algo que las otras no pueden.</p>
+        <p>Acá el proceso es la historia. Aparecen la mano que dibuja, la pantalla del software, las capas que se prenden y se apagan, las pruebas que no quedaron. De las dos rutas, esta es la que más habla del boceto y del detrás de cámaras.</p>
+        <div class="vid plyr" data-provider="vm" data-id="752025612">
+          <a class="plyr__out" href="https://vimeo.com/752025612" target="_blank" rel="noopener">Vimeo</a>
+          <img src="img/ref-xunguang.jpg" alt="Fotograma de Light Catcher, donde un personaje de linea atraviesa distintas tecnicas de animacion.">
+          <span class="media__play"></span>
+          <span class="vid__ov"><span class="media__k">Referencia · un personaje atraviesa las técnicas</span><span class="vid__t">Light Catcher</span><span class="vid__m">UoU Studio para bilibili · 2 min 34 s</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="block block--tint">
+  <div class="wrap">
+    <p class="seclabel reveal">05 · Las dos opciones, de un vistazo</p>
+    <div class="tbl-wrap reveal">
+      <table>
+        <thead><tr><th></th><th>Opción 1</th><th>Opción 2</th></tr></thead>
+        <tbody>
+          <tr><th>Nombre</th><td><b>Técnica mixta en un mismo espacio</b></td><td><b>Cinco técnicas, un mismo plano</b></td></tr>
+          <tr><th>Idea</th><td>Personajes en 2D sobre mundos en 3D e IA, evocando los hitos de la animación. Una sola familia visual.</td><td>Cada técnica de animación es un personaje, con identidad y personalidad propias.</td></tr>
+          <tr><th>Técnicas</th><td>Personajes: cut-out y tradicional. Fondos y ambientes: 3D e IA generativa.</td><td>Boceto, tradicional, 2D cut-out, 3D e IA, cada una resuelta en su propio lenguaje.</td></tr>
+          <tr><th>Personajes</th><td>Dos o tres, misma familia gráfica.</td><td>Cinco, cada uno con universo propio.</td></tr>
+          <tr><th>Rutas narrativas</th><td>Una.</td><td>Dos a elegir: 2A Las cinco identidades, 2B El proceso a la vista.</td></tr>
+          <tr><th>Relación con las ediciones anteriores</th><td>Continúa la línea del festival y le suma una capa.</td><td>Cambia la escala de lo que el festival ha mostrado.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <p class="seclabel reveal">06 · Cronograma</p>
+    <div class="timeline reveal">
+      <div class="tlrow"><div class="tlrow__d">Semana del 22 de sept. 2026</div><div class="tlrow__t">Cierre de proveedor por parte de Comfama.</div></div>
+      <div class="tlrow"><div class="tlrow__d">Octubre 2026</div><div class="tlrow__t">Concepto aprobado y diseño de personajes cerrado.</div></div>
+      <div class="tlrow"><div class="tlrow__d">Noviembre 2026</div><div class="tlrow__t">Entrega del afiche del festival y del sistema gráfico.</div></div>
+      <div class="tlrow"><div class="tlrow__d">Diciembre 2026 a enero 2027</div><div class="tlrow__t">Producción y entrega del tráiler de lanzamiento.</div></div>
+      <div class="tlrow"><div class="tlrow__d">Enero y febrero 2027</div><div class="tlrow__t">Afiche del Mercado, programación impresa, catálogo de industria y video promocional.</div></div>
+      <div class="tlrow"><div class="tlrow__d">11 al 14 de marzo 2027</div><div class="tlrow__t">Festival. Estamos presentes, damos las charlas y rodamos el video de cierre en El Retiro.</div></div>
+      <div class="tlrow"><div class="tlrow__d">Dos semanas después</div><div class="tlrow__t">Entrega del video de cierre.</div></div>
+    </div>
+
+  </div>
+</section>
+
+<section class="block block--tint">
+  <div class="wrap">
+    <p class="seclabel reveal">07 · Inversión</p>
+    <h2 class="bigt reveal">Lo que cuesta <span class="grad">cada camino</span></h2>
+    <div class="tbl-wrap reveal" style="margin-top:34px">
+      <table>
+        <thead><tr><th>Opción</th><th class="r">Sin IVA</th><th class="r">IVA 19 %</th><th class="r">Total</th></tr></thead>
+        <tbody>
+          <tr><td><b>1 · Técnica mixta en un mismo espacio</b></td><td class="r num">$55.000.000</td><td class="r num">$10.450.000</td><td class="r num">$65.450.000</td></tr>
+          <tr><td><b>2 · Cinco técnicas, un mismo plano</b></td><td class="r num">$74.000.000</td><td class="r num">$14.060.000</td><td class="r num">$88.060.000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="cond reveal">
+      <li>Vigencia de la cotización: 30 días calendario.</li>
+      <li>Forma de pago sugerida: 40 % a la firma, 30 % contra entrega del afiche y el sistema gráfico, 30 % contra entrega del tráiler.</li>
+      <li>Incluye dos rondas de ajustes por entregable. Rondas adicionales o cambios de concepto aprobado se cotizan aparte.</li>
+      <li>No incluye impresión ni producción física de las piezas gráficas.</li>
+      <li>Los archivos editables y el sistema gráfico se entregan al cierre del proyecto.</li>
+      <li>Nuestra participación en el Mercado de Animación está contemplada dentro del alcance.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="aurora aurora--soft"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+  <div class="closing__inner">
+    <p class="closing__eyebrow">Un mismo festival · Un mismo territorio</p>
+    <h2 class="closing__title">Muchas formas <span class="grad">de animar</span></h2>
+    <p class="closing__sub">La animación de El Retiro es la que Colombia va a mostrarle al mundo.</p>
+    <img class="closing__logo" src="img/logo-samsa.png" alt="Samsa Creative">
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot__row">
+    <img class="foot__logo" src="img/logo-samsa-light.png" alt="Samsa Creative">
+    <span class="foot__note">Comfama × Samsa Studio · Propuesta creativa · Septiembre 2026</span>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function sel(t){
+    tabs.forEach(function(x){
+      var on=x===t; x.setAttribute('aria-selected',on?'true':'false');
+      document.getElementById(x.getAttribute('aria-controls')).hidden=!on;
+    });
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){sel(t)});
+    t.addEventListener('keydown',function(e){
+      if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;
+      e.preventDefault();
+      var n=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];
+      n.focus();sel(n);
+    });
+  });
+})();
+var EMBEDDABLE=!/claudeusercontent|claude\.ai/i.test(location.hostname);
+if(!EMBEDDABLE)document.documentElement.classList.add('preview');
+document.querySelectorAll('.plyr').forEach(function(el){
+  var out=el.querySelector('.plyr__out');
+  var hit=document.createElement('a');
+  hit.className='plyr__hit';
+  hit.href=out?out.href:'#';
+  hit.target='_blank';hit.rel='noopener';
+  hit.textContent='Reproducir';
+  el.appendChild(hit);
+  hit.addEventListener('click',function(ev){
+    if(!EMBEDDABLE)return;            // deja que el enlace abra la pestana
+    ev.preventDefault();
+    if(el.classList.contains('playing'))return;
+    var prov=el.dataset.provider,id=el.dataset.id;
+    var url=prov==='vm'?'https://player.vimeo.com/video/'+id+'?autoplay=1'
+                       :'https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0';
+    var f=document.createElement('iframe');
+    f.src=url;f.allow='autoplay; fullscreen; picture-in-picture';f.allowFullscreen=true;f.title='Reproductor de video';
+    el.appendChild(f);el.classList.add('playing');
+  });
+});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight*1.4)el.classList.add('in')})},60);
+setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){el.classList.add('in')})},2500);
+if(matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')})}
+</script>
+
+
+</body>
+</html>
