@@ -261,7 +261,9 @@ td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 .vid__t{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(18px,2.2vw,26px);line-height:1.2;margin-top:6px}
 .vid__m{display:block;font-size:12px;color:#9DB0CC;margin-top:5px}
 .figpanel{margin:22px 0 0;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--card)}
-.figpanel img{width:100%;height:auto;display:block}
+.figpanel__duo{display:grid;grid-template-columns:1fr;gap:2px;background:var(--line)}
+@media(min-width:760px){.figpanel__duo{grid-template-columns:1fr 1fr}}
+.figpanel img{width:100%;height:auto;display:block;aspect-ratio:1800/1004;object-fit:cover}
 .figpanel figcaption{padding:12px 18px 14px;font-size:12.5px;color:var(--muted)}
 .panel__t{font-family:var(--serif);font-size:clamp(21px,2.6vw,28px);font-weight:700;line-height:1.2;margin:0 0 14px}
 .panel p{font-size:14.5px;color:var(--muted);line-height:1.65;max-width:68ch}
@@ -461,10 +463,6 @@ a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
   </div>
 </section>
 
-<div class="wide"><p class="bandlabel reveal">Exploración visual</p></div>
-<div class="moods moods--uno">
-  <img src="img/mood-3.jpg" alt="Exploración visual: escena con personajes en distintas técnicas conviviendo en el mismo espacio.">
-</div>
 <div class="wide"><p class="bandlabel reveal">Moodboard de referencias</p></div>
 <div class="moodbig bgsec" style="--bg:url(img/bg-frui-esp.jpg);--bgpos:right center;--veil:#EDF1F6;--bgsize:auto 92%"><img src="img/mood-1.jpg" alt="Tablero de referencias de estilos y técnicas de animación."></div>
 
@@ -546,7 +544,13 @@ a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
       <div class="panel" id="p2a" role="tabpanel" aria-labelledby="t2a">
         <h4 class="panel__t route__t">Las cinco identidades</h4>
         <p>Cinco personajes, cada uno construido desde un lenguaje distinto y con identidad visual propia. Cada uno habita su propio mundo.</p>
-        <figure class="figpanel"><img src="img/mood-2.jpg" alt="Los cinco personajes, cada uno resuelto en una técnica distinta, en una calle de pueblo colombiano."><figcaption>Exploración de los cinco personajes, cada uno en su técnica.</figcaption></figure>
+        <figure class="figpanel">
+          <div class="figpanel__duo">
+            <img src="img/mood-2.jpg" alt="Los cinco personajes, cada uno resuelto en una técnica distinta, en una calle de pueblo colombiano.">
+            <img src="img/mood-3.jpg" alt="Los personajes en distintas técnicas conviviendo en una escena de pueblo.">
+          </div>
+          <figcaption>Exploración visual de los cinco personajes, cada uno resuelto en su propia técnica.</figcaption>
+        </figure>
   <div class="tbl-wrap" style="margin-top:26px">
           <table class="chars">
             <thead><tr><th>Personaje</th><th>Cómo está hecho y quién es</th></tr></thead>
